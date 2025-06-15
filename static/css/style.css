@@ -1,0 +1,84 @@
+/**
+ * NeonChange - Custom CSS Styles
+ * Styles for the cryptocurrency trading platform with mobile support
+ */
+
+:root {
+    --primary-color: #2196f3;
+    --secondary-color: #00d4ff;
+    --success-color: #00c853;
+    --danger-color: #ff3d71;
+    --bg-dark: #121424;
+    --bg-card: #1a1c34;
+    --text-color: #ffffff;
+    --border-color: #2a2e4c;
+    --header-height: 60px;
+    --bottom-nav-height: 60px; /* For mobile bottom navigation */
+}
+
+/* Price change animations */
+.price-up {
+    color: var(--success-color);
+    animation: pulse-green 1s ease-in-out;
+}
+
+.price-down {
+    color: var(--danger-color);
+    animation: pulse-red 1s ease-in-out;
+}
+
+@keyframes pulse-green {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        color: var(--success-color);
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse-red {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        color: var(--danger-color);
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Real-time position updates */
+.position-update {
+    animation: highlight 2s ease-in-out;
+}
+
+@keyframes highlight {
+    0% {
+        background-color: rgba(33, 150, 243, 0);
+    }
+    50% {
+        background-color: rgba(33, 150, 243, 0.2);
+    }
+    100% {
+        background-color: rgba(33, 150, 243, 0);
+    }
+}
+
+/* Enhanced TradingView chart container */
+.tradingview-widget-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: var(--bg-card);
+}
+
+/* Mobile-specific styles */
+.mobile-bottom-nav {
+    display: none;
+}
