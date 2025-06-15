@@ -1,0 +1,249 @@
+/* RTL (Right-to-Left) Specific Styles for Persian Text */
+
+body, button, input, select, textarea {
+    font-family: 'Vazirmatn', 'Tahoma', sans-serif;
+}
+
+/* Farsi digits */
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* RTL fixes for Bootstrap */
+.float-right {
+    float: left !important;
+}
+
+.float-left {
+    float: right !important;
+}
+
+.text-left {
+    text-align: right !important;
+}
+
+.text-right {
+    text-align: left !important;
+}
+
+.ml-auto {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+
+.mr-auto {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+.ml-1, .ml-2, .ml-3, .ml-4, .ml-5 {
+    margin-right: 0.25rem !important;
+    margin-left: 0 !important;
+}
+
+.mr-1, .mr-2, .mr-3, .mr-4, .mr-5 {
+    margin-left: 0.25rem !important;
+    margin-right: 0 !important;
+}
+
+.pl-1, .pl-2, .pl-3, .pl-4, .pl-5 {
+    padding-right: 0.25rem !important;
+    padding-left: 0 !important;
+}
+
+.pr-1, .pr-2, .pr-3, .pr-4, .pr-5 {
+    padding-left: 0.25rem !important;
+    padding-right: 0 !important;
+}
+
+/* RTL for navigation */
+.navbar-nav {
+    padding-right: 0;
+}
+
+/* RTL for form elements */
+.form-check-input {
+    margin-right: -1.25rem;
+    margin-left: 0;
+}
+
+.form-check {
+    padding-right: 1.25rem;
+    padding-left: 0;
+}
+
+.custom-control {
+    padding-right: 1.5rem;
+    padding-left: 0;
+}
+
+.custom-control-label::before,
+.custom-control-label::after {
+    right: -1.5rem;
+    left: auto;
+}
+
+.dropdown-menu {
+    right: 0;
+    left: auto;
+    text-align: right;
+}
+
+/* RTL for input group */
+.input-group > .form-control:not(:last-child),
+.input-group > .custom-select:not(:last-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.input-group > .form-control:not(:first-child),
+.input-group > .custom-select:not(:first-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+.input-group > .input-group-prepend > .btn,
+.input-group > .input-group-prepend > .input-group-text,
+.input-group > .input-group-append:not(:last-child) > .btn,
+.input-group > .input-group-append:not(:last-child) > .input-group-text,
+.input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.input-group > .input-group-append > .btn,
+.input-group > .input-group-append > .input-group-text,
+.input-group > .input-group-prepend:not(:first-child) > .btn,
+.input-group > .input-group-prepend:not(:first-child) > .input-group-text,
+.input-group > .input-group-prepend:first-child > .btn:not(:first-child),
+.input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+.input-group-prepend {
+    margin-left: -1px;
+    margin-right: 0;
+}
+
+.input-group-append {
+    margin-right: -1px;
+    margin-left: 0;
+}
+
+/* RTL for modal */
+.modal-header .close {
+    margin: -1rem auto -1rem -1rem;
+}
+
+/* RTL for list groups */
+.list-group {
+    padding-right: 0;
+}
+
+/* RTL for breadcrumbs */
+.breadcrumb-item + .breadcrumb-item::before {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    content: "\\"; /* Use backward slash for RTL breadcrumb separator */
+}
+
+/* RTL for alerts */
+.alert-dismissible {
+    padding-right: 1.25rem;
+}
+
+.alert-dismissible .close {
+    right: auto;
+    left: 0;
+}
+
+/* RTL for badges */
+.badge {
+    direction: ltr; /* For numbers inside badges */
+}
+
+/* RTL for tables */
+.table th,
+.table td {
+    text-align: right;
+}
+
+/* RTL for pagination */
+.pagination {
+    padding-right: 0;
+}
+
+.page-item:first-child .page-link {
+    margin-right: 0;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.page-item:last-child .page-link {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* RTL for cards */
+.card-header-tabs,
+.card-header-pills {
+    margin-left: 0;
+    margin-right: -0.625rem;
+}
+
+/* Fix for TradingView chart in RTL mode */
+.tradingview-widget-container {
+    direction: ltr;
+}
+
+/* Fix for some elements that should stay LTR */
+.crypto-symbol, 
+.price-value, 
+.tradingview-widget-container,
+.code {
+    direction: ltr;
+    text-align: left;
+}
+
+/* RTL for leverage slider */
+.form-range::-webkit-slider-thumb {
+    margin-top: -0.54rem;
+}
+
+/* RTL styles for Trading Interface */
+.trading-interface .order-form,
+.trading-interface .market-info {
+    direction: rtl;
+}
+
+/* Ensure numbers are displayed correctly */
+.number {
+    direction: ltr;
+    display: inline-block;
+}
