@@ -82,3 +82,100 @@
 .mobile-bottom-nav {
     display: none;
 }
+
+@media (max-width: 768px) {
+    /* General responsive adjustments */
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    /* Mobile navigation styling */
+    .mobile-bottom-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: var(--bottom-nav-height);
+        background-color: var(--bg-card);
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+    
+    .mobile-nav-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-color);
+        text-decoration: none;
+        font-size: 0.8rem;
+        padding: 8px 0;
+    }
+    
+    .mobile-nav-item i {
+        font-size: 1.5rem;
+        margin-bottom: 4px;
+    }
+    
+    .mobile-nav-item.active {
+        color: var(--primary-color);
+    }
+    
+    /* Adjust main content to account for bottom nav */
+    body {
+        padding-bottom: var(--bottom-nav-height);
+    }
+    
+    /* Hide regular footer on mobile */
+    .site-footer {
+        padding-bottom: calc(var(--bottom-nav-height) + 20px);
+    }
+    
+    /* Adjust market ticker */
+    .market-ticker-container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 10px 0;
+    }
+    
+    .ticker-item {
+        flex: 0 0 auto;
+        margin-right: 15px;
+    }
+    
+    /* Responsive table adjustments */
+    .table-responsive {
+        overflow-x: auto;
+    }
+    
+    /* TradingView adjustments for mobile */
+    .tradingview-widget-container {
+        height: 300px !important; /* Lower height on mobile */
+    }
+    
+    /* Responsive form adjustments */
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .card {
+        margin-bottom: 15px;
+    }
+    
+    /* Adjust trading interface for mobile */
+    .trading-interface {
+        flex-direction: column;
+    }
+    
+    .trading-controls {
+        margin-top: 15px;
+    }
+    
+    .position-card {
+        margin-bottom: 10px;
+    }
+}
